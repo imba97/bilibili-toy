@@ -34,7 +34,8 @@
     "check": "vp check",
     "test": "vp test",
     "staged": "vp staged",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp"
   },
   "devDependencies": {
     "@types/node": "^26.6.2",
