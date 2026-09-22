@@ -9,7 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Strict-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
-[官网](https://github.com/imba97/bilibili-toy-starter) · [问题反馈](https://github.com/imba97/bilibili-toy-starter/issues) · [更新日志](https://github.com/imba97/bilibili-toy-starter/releases)
+[官网](https://github.com/imba97/bilibili-toy) · [问题反馈](https://github.com/imba97/bilibili-toy/issues) · [更新日志](https://github.com/imba97/bilibili-toy/releases)
 
 </div>
 
@@ -29,16 +29,22 @@
 
 ## 目录
 
-- [安装](#安装)
-- [快速开始](#快速开始)
-- [Mock 覆盖钩子](#mock-覆盖钩子)
-- [API 参考](#api-参考)
-  - [`toy` — 平台能力](#toy--平台能力)
-  - [Namespace 列表](#namespace-列表)
-- [错误处理](#错误处理)
-- [重试策略](#重试策略)
-- [Mock 基础设施导出](#mock-基础设施导出)
-- [协议](#协议)
+- [📦 bilibili-toy](#-bilibili-toy)
+  - [特性](#特性)
+  - [目录](#目录)
+  - [安装](#安装)
+  - [快速开始](#快速开始)
+  - [Mock 覆盖钩子](#mock-覆盖钩子)
+    - [`MockCtx` 字段](#mockctx-字段)
+    - [上下文控制](#上下文控制)
+  - [API 参考](#api-参考)
+    - [`toy` — 平台能力](#toy--平台能力)
+    - [Namespace 列表](#namespace-列表)
+  - [错误处理](#错误处理)
+    - [错误帮助函数](#错误帮助函数)
+  - [重试策略](#重试策略)
+  - [Mock 基础设施导出](#mock-基础设施导出)
+  - [协议](#协议)
 
 ---
 
@@ -220,7 +226,7 @@ import {
 } from 'bilibili-toy'
 ```
 
-这些导出供应用层 mock（`src/mock/<namespace>.ts`）复用，方便共享同一套 store 与持久化机制，避免重复实现。SDK 本身保持业务无关 — 用户池、昵称、头像都由应用层维护。
+这些导出供上层 Toy 应用复用，方便共享同一套 store 与持久化机制，避免重复实现。SDK 本身保持业务无关 — 用户池、昵称、头像等测试数据由调用方维护。
 
 ---
 
