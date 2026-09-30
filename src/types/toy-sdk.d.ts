@@ -274,7 +274,9 @@ declare namespace ToySDK {
   // ---------------------------------------------------------------------------
 
   /** 视频引用：每项只能传 `aid` 或 `bvid` 之一，同时传或都不传会本地抛错。 */
-  type AuthorVideoRef = { aid: number; bvid?: never } | { bvid: string; aid?: never }
+  type AuthorVideoRef =
+    | { aid: number; bvid?: never }
+    | { bvid: string; aid?: never }
 
   interface AuthorVideosReq {
     /** 1–50 项；SDK 会按 aid/bvid 去重并保留首次出现顺序。 */
